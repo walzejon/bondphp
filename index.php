@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>bondphp</title>
+    <link rel="stylesheet" href="base.css">
 </head>
 <body>
 <?php
