@@ -1,5 +1,5 @@
 <?php
-$servername = 'benjii.vergil.u.washington.edu';
+$servername = 'vergil.u.washington.edu';
 $username = 'phpwebsite';
 $password = 'password';
 $database = 'Portfolio';
