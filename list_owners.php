@@ -30,7 +30,7 @@ $stmt->bind_result($firstName,$lastName,$ownerID);
 echo "<ul>";
 while ($stmt->fetch()) {
 echo '<li><a href="list_stock.php?id=' .
-$ownerID . '">'$lastName, . $firstName . '</a></li>';
+$ownerID . '">'$lastName'. ', '. $firstName . '</a></li>';
 }
 echo "</ul>";
 }
