@@ -1,7 +1,7 @@
 <?php
 
 require_once 'config.inc.php';
-require_once 'index.html';
+require_once 'index.php';
 ?>
 <html>
 
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 // Prepare SQL Statement
-$sql = "SELECT firstName,lastName,ownerID FROM Customer ORDER BY
+$sql = "SELECT firstName,lastName,ownerID FROM Owner ORDER BY
 lastName";
 $stmt = $conn->stmt_init();
 if (!$stmt->prepare($sql)) {
@@ -30,7 +30,7 @@ $stmt->bind_result($firstName,$lastName,$ownerID);
 echo "<ul>";
 while ($stmt->fetch()) {
 echo '<li><a href="list_stock.php?id=' .
-$firstName . '">' . $lastName . '</a></li>';
+$lastName . '">' . $firstName . '</a></li>';
 }
 echo "</ul>";
 }
