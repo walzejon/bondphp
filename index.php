@@ -10,6 +10,8 @@
     <title>bondphp</title>
 </head>
 <body>
-
+<?php
+require_once 'header.inc.php';
+?>
 </body>
 </html>
