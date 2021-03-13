@@ -26,9 +26,17 @@ if ($id === "" OR $id === false OR $id === null) {
             }
 
             // SQL Query
-            $sql = "SELECT O.ownerid, O.firstName, O.lastName, O.email, O.phoneNumber, A.accountNum FROM Owner O INNER JOIN (OwnerAccount OA "
-            . "INNER JOIN Account A USING (accountNum)) "
-            . "USING (ownerid) WHERE O.ownerid = ?";
+            $sql = "SELECT "
+            . "O.ownerid, O.firstName, O.lastName, O.email, O.phoneNumber, A.accountNum, A.accountCreationDate, "
+            . "S.stockId, S.numberOwned, S.currentprice, C.tickerSymbol, C.companyName FROM Owner O "
+            . "INNER JOIN ("
+                . "OwnerAccount OA INNER JOIN ("
+                    . "Account A INNER JOIN ("
+                    . "Stock S INNER JOIN Company C USING (companyId)"
+                    . ") USING (stockID)"
+                . ") USING (accountNum)"
+            . ") USING (ownerid) "
+            . "WHERE O.ownerid = ?";
             
             
             $stmt = $conn->stmt_init();
@@ -37,10 +45,13 @@ if ($id === "" OR $id === false OR $id === null) {
             } else {
                 $stmt->bind_param('s', $id);
                 $stmt->execute();
-                $stmt->bind_result($ownerid, $firstName, $lastName, $email, $phoneNumber);
+                $stmt->bind_result($ownerid, $firstName, $lastName, $email, $phoneNumber, $accountNum, $accountCreationDate, $stockid, $numOwn,
+                                    $currentprice, $tickersymbol, $companyname);
                 echo "<div>";
                 while ($stmt->fetch()) {
-                    echo $ownerid . ', ' . $firstName . ', ' . $lastName . ', ' . $email . ', ' . $phoneNumber . '<br>'; 
+                    echo $ownerid . ', ' . $firstName . ', ' . $lastName . ', ' . $email . ', ' . $phoneNumber
+                    . $accountNum . ', ' . $accountCreationDate . ', ' . $stockid . ', ' . $numOwn . ', ' . 
+                    $currentprice . ', ' . $tickersymbol . ', ' . $companyname . '<br>'; 
                 }
                 echo "</div>";
             }
