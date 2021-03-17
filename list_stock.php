@@ -56,24 +56,27 @@ if ($id === "" OR $id === false OR $id === null) {
                 echo "<div><table>";
 
                 echo 
-                "<tr>
+                '<tr>
                     <th>Owner ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
+                    <th>Account Number</th>
                     <th>Account Creation Date</th>
                     <th>Quantity</th>
                     <th>Stock ID</th>
                     <th>Current Price</th>
                     <th>Stock Ticker Symbol</th>
                     <th>Company Name</th>
-                </tr>";
+                </tr>';
 
                 while ($stmt->fetch()) {
-                    echo '<tr><td>' . $ownerid . '</td><td>' . $firstName . '</td><td>' . $lastName . '</td><td>' . $email . '</td><td>' . $phoneNumber
-                    . $accountNum . '</td><td>' . $accountCreationDate . '</td><td>' . $quantity . '</td><td>' . $stockid . '</td><td>' . 
-                    $currentprice . '</td><td>' . $tickersymbol . '</td><td>' . $companyname . '</td></tr>'; 
+                    echo '<tr><td>' . $ownerid . '</td><td>' . $firstName . '</td><td>' . $lastName . '</td><td>' . $email 
+                    . '</td><td>' . $phoneNumber . '</td><td>' . $accountNum . '</td><td>' . $accountCreationDate 
+                    . '</td><td><a href="update_stock.php?stockID=' . $stockid . '"&accountNum=' . $accountNum . '>' . $quantity 
+                    . '</a></td><td>' . $stockid . '</td><td>' . $currentprice . '</td><td>' . $tickersymbol . '</td><td>' 
+                    . $companyname . '</td></tr>'; 
                 }
                 echo "<table></div>";
             }
