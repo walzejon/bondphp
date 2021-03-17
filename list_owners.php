@@ -64,8 +64,8 @@ require_once 'index.php';
 				</tr>";
 				
 				while ($stmt->fetch()) {
-				echo '<tr><td>' '<a href="list_stock.php?id=' .
-				$ownerID . '">'. $lastName . ', ' . $firstName . '</td><td>' . $email . '</td><td>' . $phonenumber . '</td></tr>'; 
+					echo '<tr><td><a href="list_stock.php?id=' .
+					$ownerID . '">' . $lastName . ', ' . $firstName . '</td><td>' . $email . '</td><td>' . $phonenumber . '</td></tr>'; 
 				}
 				echo "<table></div>";
             }
