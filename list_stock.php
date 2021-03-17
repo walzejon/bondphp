@@ -10,15 +10,11 @@ if ($id === "" OR $id === false OR $id === null) {
     exit();
 }
 ?>
-
+<!DOCTYPE html>
 <html>
-    <style>
-    table, th, td {
-        border: 1px solid black;
-    }
-    </style>
     <head>
         <title>Stock Database Program</title>
+        <link rel="stylesheet" type="text/css" href="base.css?v=<?php echo time(); ?>"/>
     </head>
     <body>
         <div>
