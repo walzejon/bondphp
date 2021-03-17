@@ -29,3 +29,7 @@
 table, th, td {
     border: 1px solid black;
 }
+
+.Form, .FormHeader {
+    text-align: center;
+}

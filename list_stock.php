@@ -80,5 +80,9 @@ if ($id === "" OR $id === false OR $id === null) {
             $conn->close();
             ?>
         </div>
+        <div>
+            <br>
+            <a href="list_owners.php"><-Return</a>
+        </div>
     </body>
 </html>

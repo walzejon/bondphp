@@ -6,7 +6,7 @@ require_once 'index.php';
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Owners List</title>
+    <title>Stock Database Program</title>
     <link rel="stylesheet" href="base.css?v=<?php echo time ?>"/>
 </head>
 
@@ -14,13 +14,10 @@ require_once 'index.php';
 <div>
     <h2>Owners List</h2>
 
-    <p>
-    
-    Press <b>Filter</b> without any input to get a full unfilitered list of the Owners. <br><br>
+    <p>Press <b>Filter</b> without any input to get a full unfilitered list of the Owners. Click
+    the hyperlinks to see what stocks each person owns.</p>
 
-    Format: <i>Lastname, Firstname, email, phone number</i>
-    
-    </p>
+    <p>Format: <i>Lastname, Firstname, email, phone number</i></p>
 
 
     <?php 
