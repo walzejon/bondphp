@@ -88,16 +88,16 @@ require_once 'index.php';
                 <option value="OR">Oregon</option>
                 <option value="PA">Pennsylvania</option>
                 <option value="RI">Rhode Island</option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
-                <option value=""> </option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
                 <option value=""> </option>
                 <option value=""> </option>
             </select>
