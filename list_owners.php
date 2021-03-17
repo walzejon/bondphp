@@ -7,7 +7,7 @@ require_once 'index.php';
 <html>
 <head>
     <title>Stock Database Program</title>
-    <link rel="stylesheet" href="base.css?v=<?php echo time ?>"/>
+    <link rel="stylesheet" type="text/css" href="base.css?v=<?php echo time(); ?>"/>
 </head>
 
 <body>

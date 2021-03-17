@@ -6,7 +6,7 @@ require_once 'header.inc.php';
     <head>
         <meta charset="UTF-8">
         <title>bondphp</title>
-        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" type="text/css" href="base.css?v=<?php echo time(); ?>"/>
     </head>
     <body>
     </body>

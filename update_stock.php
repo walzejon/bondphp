@@ -38,7 +38,7 @@ if ($accountNum === null) {
 <html>
 <head>
     <title>Stock Update</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" type="text/css" href="base.css?v=<?php echo time(); ?>"/>
 </head>
 <body>
 <?php
@@ -102,7 +102,7 @@ require_once 'header.inc.php';
 
                     //echo $accNum . ', ' . $stckId . ', ' . $outQuant;
 
-                    echo "<div> New Total = " . $outQuant . "</div>";
+                    echo "<div class='outputStuff'> Updated New Total = " . $outQuant . "</div>";
 
                 }
 
@@ -127,7 +127,7 @@ require_once 'header.inc.php';
         <form method="post">
             <input type="hidden" name="stockID" value="<?= $stockID ?>">
             <input type="hidden" name="accountNum" value="<?= $accountNum ?>">
-            New Total: <input type="text" name="newTotal">
+            Enter a Stock Total: <input type="text" name="newTotal">
             <button type="submit">Update</button>
         </form>
     

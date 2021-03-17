@@ -14,7 +14,7 @@ require_once 'index.php';
 </head>
 
 <body>
-    <div classs="FormHeader">
+    <div class="FormHeader">
         <h2>Register New User</h2>
     </div>
     <?php
