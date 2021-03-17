@@ -6,7 +6,6 @@
 require_once 'config.inc.php';
 require_once 'index.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

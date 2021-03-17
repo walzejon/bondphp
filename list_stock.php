@@ -1,12 +1,9 @@
 <?php
 require_once 'config.inc.php';
 require_once 'index.php';
-
 //Test
-
 // Get
 $id = $_GET['id'];
-
 if ($id === "" OR $id === false OR $id === null) {
     header('location: list_owners.php');
     exit();
