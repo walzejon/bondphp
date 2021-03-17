@@ -94,13 +94,13 @@ require_once 'header.inc.php';
             <input type="hidden" name="stockID" value="<?= $stockID ?>">
             <?php
             while ($stmt->fetch()) {
-                echo '<a href="show_stock.php?stockID='  . $stockID . '">' . $customerName . '</a><br>
+                echo '<a href="show_stock.php?stockID='  . $stockID . '">';
             }
             ?>
             <input type="hidden" name="accountNum" value="<?= $accountNum ?>">
             <?php
             while ($stmt->fetch()) {
-                echo '<a href="show_stock.php?stockID='  . $customerNumber . '">' . $customerName . '</a><br>
+                echo '<a href="show_stock.php?accountNum='  . $accountNum . '">';
             }
             ?><br><br>
             New Total: <input type="text" name="newTotal">
