@@ -79,7 +79,7 @@ require_once 'header.inc.php';
     }
 
     /* Refresh the Data */
-    $sql = "SELECT * FROM Account A " .
+    /*$sql = "SELECT * FROM Account A " .
         "INNER JOIN AccountStock ASS USING accountNum WHERE ASS.accountNum = ? AND ASS.stockID=?";
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
@@ -89,25 +89,17 @@ require_once 'header.inc.php';
         $stmt->bind_param('ss',$accountNum, $stockID);
         $stmt->execute();
         $stmt->bind_result($accountNum, $stockID);
+    */
         ?>
+    
         <form method="post">
             <input type="hidden" name="stockID" value="<?= $stockID ?>">
-            <?php
-            while ($stmt->fetch()) {
-                echo '<a href="show_stock.php?stockID='  . $stockID . '">';
-            }
-            ?>
             <input type="hidden" name="accountNum" value="<?= $accountNum ?>">
-            <?php
-            while ($stmt->fetch()) {
-                echo '<a href="show_stock.php?accountNum='  . $accountNum . '">';
-            }
-            ?><br><br>
             New Total: <input type="text" name="newTotal">
             <button type="submit">Update</button>
         </form>
-        <?php
-    }
+    
+    <?php
 
     $conn->close();
 
