@@ -80,7 +80,7 @@ require_once 'header.inc.php';
 
     /* Refresh the Data */
     $sql = "SELECT * FROM Account A " .
-        "INNER JOIN AccountStock AS USING accountNum WHERE AS.accountNum = ? AND AS.stockID=?";
+        "INNER JOIN AccountStock ASS USING accountNum WHERE ASS.accountNum = ? AND ASS.stockID=?";
     $stmt = $conn->stmt_init();
     if (!$stmt->prepare($sql)) {
         echo "failed to prepare";
