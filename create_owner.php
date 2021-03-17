@@ -48,7 +48,7 @@ require_once 'index.php';
             </p>
 
             <label for="statecode">State Code</label> 
-            <select>
+            <select name="statecode">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -98,21 +98,27 @@ require_once 'index.php';
                 <option value="WA">Washington</option>
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
-                <option value=""> </option>
-                <option value=""> </option>
-            </select>
+                <option value="WY">Wyoming</option>
+                <option value="DC">District of Columbia</option>
+                <option value="AS">American Samoa</option>
+                <option value="GU">Guam</option>
+                <option value="MP">Northern Mariana Islands</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="UM">United states Minor Outying Islands</option>
+                <option value="VI">U.S. Virgin Islands</option>
+            </select><br><br>
 
-            <label for="ownerid">Street Address (150 chars max)</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <label for="street">Street Address (150 chars max)</label> 
+            <input type="text" name="street" id="street"><br><br>
 
-            <label for="ownerid">City (150 chars max)</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <label for="city">City (150 chars max)</label> 
+            <input type="text" name="city" id="city"><br><br>
 
-            <label for="ownerid">Postal Code</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <label for="postal">Postal Code</label> 
+            <input type="text" name="postal" id="postal"><br><br>
 
-            <label for="ownerid">Marital Status</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <label for="marital">Marital Status</label> 
+            <input type="text" name="marital" id="marital"><br><br>
 
             </fieldset>
 
@@ -120,24 +126,72 @@ require_once 'index.php';
             <legend>Contact Information</legend>
 
             <label for="email">Email</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <input type="email" name="email" id="email"><br><br>
 
-            <label for="ownerid">Phone Number (Numbers only)</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <label for="phone">Phone Number</label> 
+            <input type="tel" name="phone" id="phone"><br>
 
-            <label for="ownerid">Would you like electronic updates</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <p> 
+                <label>Electronic Updates?</label> 
+                <input type = "radio" name="eupdate" value="yes" id = "yes"/>Yes 
+                <input type = "radio" name="eupdate" value="no" id="no" checked = "checked" />No
+                <input type = "radio" name="eupdate" value="limited" id="limited"/>Maybe?
+            </p>
 
             </fieldset>
 
             <fieldset>
             <legend>Additional Information</legend>
 
-            <label for="ownerid">Investment Knowledge</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <p> 
+                <label>Stock Knowledge?</label> 
+                <input type = "radio" name="knowledge" value="yes" id = "yes"/>Yes 
+                <input type = "radio" name="knowledge" value="none" id="no" checked = "checked" />None
+                <input type = "radio" name="knowledge" value="little" id="limited"/>stonks
+            </p>
 
             </fieldset>
         </form>
+
+        <?php
+        $conn = new mysqli($servername, $username, $password, $database, $port);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $ownerid = $_POST['ownerid'];
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $ssn = $_POST['ssn'];
+            $citizenship = $_POST['citizenship'];
+            $state = $_POST['statecode'];
+            $street = $_POST['street'];
+            $city = $_POST['city'];
+            $postal = $_POST['postal'];
+            $marital = $_POST['email'];
+            $phone = $_POST['phone'];
+            $eupdates = $_POST['eupdate'];
+            $knowledge = $_POST['knowledge'];
+
+            if ($ownerid === null || $ownerid === false || trim($ownerid) === ""
+            || $firstname === null || $firstname === false || trim($firstname) === ""
+            || $lastname === null || $lastname === false || trim($lastname) === ""
+            || $ssn === null || $ssn === false || trim($ssn) === ""
+            || $citizenship === null || $citizenship === false || trim($citizenship) === ""
+            || $state === null || $state === false || trim($state) === ""
+            || $street === null || $street === false || trim($street) === ""
+            || $city === null || $ownerid === false || trim($ownerid) === ""
+            || $ownerid === null || $ownerid === false || trim($ownerid) === ""
+            || $ownerid === null || $ownerid === false || trim($ownerid) === ""
+            || $ownerid === null || $ownerid === false || trim($ownerid) === ""
+            || $ownerid === null || $ownerid === false || trim($ownerid) === ""
+            || $ownerid === null || $ownerid === false || trim($ownerid) === "")
+
+        }
+        ?>
+
     </div>
 </body>
 

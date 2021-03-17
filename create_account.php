@@ -23,13 +23,11 @@ require_once 'index.php';
             <fieldset>
             <legend>Account Information</legend>
 
-            <label for="accountnum">Username (10 chars max)</label> 
+            <label for="accountnum">Username (Numbers Only)</label> 
             <input type="text" name="ownerid" id="ownerid"><br><br>
 
-            <input type="hidden" name="firstname" id="firstname"><br><br>
-
-            <label for="lastname">Payment Method (45 chars)</label> 
-            <input type="text" name="lastname" id="lastname"><br><br>
+            <label for="paym">Payment Method (45 chars)</label> 
+            <input type="text" name="paym" id="paym"><br><br>
 
             <label for="statecode">State Code</label> 
             <select>
@@ -37,8 +35,13 @@ require_once 'index.php';
                 <option value="AK">Joint</option>
                 <option value="AZ">Other</option>
             </select>
+            <br>
+
+            <button type="submit">Submit</button>
+
             </fieldset>
         </form>
+
     </div>
 </body>
 
