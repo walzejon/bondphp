@@ -67,7 +67,7 @@ require_once 'index.php';
 					echo '<tr><td><a href="list_stock.php?id=' .
 					$ownerID . '">' . $lastName . ', ' . $firstName . '</td><td>' . $email . '</td><td>' . $phonenumber . '</td></tr>'; 
 				}
-				echo "<table></div>";
+				echo "</table></div>";
             }
 
         }
@@ -83,7 +83,7 @@ require_once 'index.php';
     <form method="POST">
         First Name: <input type="text" name="firstnameInput">
         Last Name: <input type=:text" name="lastnameInput">
-        <button type="submit">Filter</button>
+        <button type="submit">Search</button>
     </form>
     
     

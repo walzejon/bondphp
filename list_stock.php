@@ -19,6 +19,8 @@ if ($id === "" OR $id === false OR $id === null) {
     <body>
         <div>
             <h2>List Stocks Owned by Owner</h2>
+            <p>Select the hyperlinks under <b>Quantity</b> to alter the number of stocks that person owns.</p>
+
             <?php
             // Initializing SQL connection
             $conn = new mysqli($servername, $username, $password, $database, $port);
@@ -72,8 +74,8 @@ if ($id === "" OR $id === false OR $id === null) {
                 while ($stmt->fetch()) {
                     echo '<tr><td>' . $ownerid . '</td><td>' . $firstName . '</td><td>' . $lastName . '</td><td>' . $email 
                     . '</td><td>' . $phoneNumber . '</td><td>' . $accountNum . '</td><td>' . $accountCreationDate 
-                    . '</td><td><a href="update_stock.php?stockID=' . $stockid . '&accountNum=' . $accountNum . '">' . $quantity 
-                    . '</a></td><td>' . $stockid . '</td><td>' . $currentprice . '</td><td>' . $tickersymbol . '</td><td>' 
+                    . '</td><td><a href="update_stock.php?id=' . $id . '&stockID=' . $stockid . '&accountNum=' . $accountNum . '">' 
+                    . $quantity . '</a></td><td>' . $stockid . '</td><td>' . $currentprice . '</td><td>' . $tickersymbol . '</td><td>' 
                     . $companyname . '</td></tr>'; 
                 }
                 echo "<table></div>";
