@@ -42,13 +42,65 @@ require_once 'index.php';
 
             <p> 
                 <label>Citizen Status</label> 
-                <input type = "radio" name="citizen" value="Citizen" id = "citizen" checked = "checked" />
-                <input type = "radio" name="noncitizen" value="Not Citizen" id="noncitizen"/>
-                <input type = "radio" name="permitted" value="Permitted Non Citizen" id="permitted"/>
+                <input type = "radio" name="citizenship" value="citizen" id = "citizen" checked = "checked" />Citizen 
+                <input type = "radio" name="citizenship" value="noncitizen" id="noncitizen"/>Non-Citizen
+                <input type = "radio" name="citizenship" value="permitted" id="permitted"/>Permitted Non-Citizen
             </p>
 
             <label for="statecode">State Code</label> 
-            <input type="text" name="ownerid" id="ownerid"><br><br>
+            <select>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+                <option value=""> </option>
+            </select>
 
             <label for="ownerid">Street Address (150 chars max)</label> 
             <input type="text" name="ownerid" id="ownerid"><br><br>
