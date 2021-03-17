@@ -56,7 +56,7 @@ require_once 'index.php';
                     $ownerID . '">' . $lastName . ', ' . $firstName . '</a>, ' . $email . ', ' . $phonenumber . '</li>';
                 }*/
 				
-                echo "</ul>";
+                echo "<div><table>";
 					echo "<tr>
 					<th>Last, First</th>
 					<th>Email</th>
