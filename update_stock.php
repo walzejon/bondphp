@@ -69,7 +69,7 @@ require_once 'header.inc.php';
             } else {
 
                 // Bind user input to statement
-                $stmt->bind_param('sss', $newTotal,$stockID, $accountNum);
+                $stmt->bind_param('sii', $newTotal,$stockID, $accountNum);
 
                 // Execute statement and commit transaction
                 $stmt->execute();
