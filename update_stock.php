@@ -86,7 +86,7 @@ require_once 'header.inc.php';
         echo "failed to prepare";
     }
     else {
-        $stmt->bind_param('ss',$accountNum, $stockID);
+        $stmt->bind_param('is',$accountNum, $stockID);
         $stmt->execute();
         $stmt->bind_result($accountNum, $stockID);
         ?>
