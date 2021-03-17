@@ -5,10 +5,9 @@
 <div class="topnav">
     <a href="index.php">Home</a>
     <a href="list_owners.php">List Owners</a>
-    <a href="create_owner.php">Register New Account</a>
     <!-- add the rest of the nav bar links below with correct file names and navbar names
      ex:-->
     <!--<a href="list_products.php">List Products</a> -->
 
 </div></div>
-<h1>Stocks Database Program</h1>
+<h1>Sample PHP Database Program</h1>

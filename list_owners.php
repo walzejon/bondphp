@@ -49,13 +49,24 @@ require_once 'index.php';
                 $conn->commit();
 
                 // Print
-                echo "<ul>";
+                /*echo "<ul>";
                 $stmt->bind_result($firstName, $lastName, $ownerID, $email, $phonenumber);
                 while ($stmt->fetch()) {
                     echo '<li><a href="list_stock.php?id=' .
                     $ownerID . '">' . $lastName . ', ' . $firstName . '</a>, ' . $email . ', ' . $phonenumber . '</li>';
-                }
+                }*/
+				
                 echo "</ul>";
+					echo "<tr>
+					<th>Last, First</th>
+					<th>Email</th>
+					<th>Phonenumber</th>
+				</tr>"
+				while ($stmt->fetch()) {
+				echo '<tr><td>' '<a href="list_stock.php?id=' .
+				$ownerID . '">'. $lastName . ', ' . $firstName . '</td><td>' . $email . '</td><td>' . $phonenumber . '</td></tr>'; 
+				}
+				echo "<table></div>";
             }
 
         }
@@ -87,12 +98,10 @@ require_once 'index.php';
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
     // Prepare SQL Statement
     $sql = "SELECT firstName,lastName,ownerID FROM Owner ORDER BY
     lastName";
     $stmt = $conn->stmt_init();
-
     if (!$stmt->prepare($sql)) {
         echo "failed to prepare";
     } else {
