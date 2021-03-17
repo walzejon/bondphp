@@ -22,7 +22,7 @@ if ($id === "" OR $id === false OR $id === null) {
     </head>
     <body>
         <div>
-            <h2>List Stocks Owned by Owner (Testing Query)</h2>
+            <h2>List Stocks Owned by Owner</h2>
             <?php
             // Initializing SQL connection
             $conn = new mysqli($servername, $username, $password, $database, $port);

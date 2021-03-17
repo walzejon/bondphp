@@ -10,4 +10,4 @@
     <!--<a href="list_products.php">List Products</a> -->
 
 </div></div>
-<h1>Sample PHP Database Program</h1>
+<h1>Stocks Database Program</h1>
