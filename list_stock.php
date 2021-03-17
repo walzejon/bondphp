@@ -12,6 +12,11 @@ if ($id === "" OR $id === false OR $id === null) {
 ?>
 
 <html>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    </style>
     <head>
         <title>Stock Database Program</title>
     </head>
@@ -50,13 +55,29 @@ if ($id === "" OR $id === false OR $id === null) {
                 $stmt->execute();
                 $stmt->bind_result($ownerid, $firstName, $lastName, $email, $phoneNumber, $accountNum, $accountCreationDate, $quantity, $stockid,
                                     $currentprice, $tickersymbol, $companyname);
-                echo "<div>";
+                echo "<div><table>";
+
+                echo 
+                "<tr>
+                    <th>Owner ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Account Creation Date</th>
+                    <th>Quantity</th>
+                    <th>Stock ID</th>
+                    <th>Current Price</th>
+                    <th>Stock Ticker Symbol</th>
+                    <th>Company Name</th>
+                </tr>";
+
                 while ($stmt->fetch()) {
-                    echo $ownerid . ', ' . $firstName . ', ' . $lastName . ', ' . $email . ', ' . $phoneNumber
-                    . $accountNum . ', ' . $accountCreationDate . ', ' . $quantity . ', ' . $stockid . ', ' . 
-                    $currentprice . ', ' . $tickersymbol . ', ' . $companyname . '<br>'; 
+                    echo '<tr><td>' . $ownerid . '</td><td>' . $firstName . '</td><td>' . $lastName . '</td><td>' . $email . '</td><td>' . $phoneNumber
+                    . $accountNum . '</td><td>' . $accountCreationDate . '</td><td>' . $quantity . '</td><td>' . $stockid . '</td><td>' . 
+                    $currentprice . '</td><td>' . $tickersymbol . '</td><td>' . $companyname . '</td></tr>'; 
                 }
-                echo "</div>";
+                echo "<table></div>";
             }
 
             // Closing SQL connection
