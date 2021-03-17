@@ -61,7 +61,8 @@ require_once 'index.php';
 					<th>Last, First</th>
 					<th>Email</th>
 					<th>Phonenumber</th>
-				</tr>"
+				</tr>";
+				
 				while ($stmt->fetch()) {
 				echo '<tr><td>' '<a href="list_stock.php?id=' .
 				$ownerID . '">'. $lastName . ', ' . $firstName . '</td><td>' . $email . '</td><td>' . $phonenumber . '</td></tr>'; 
