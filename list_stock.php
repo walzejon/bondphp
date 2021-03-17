@@ -7,10 +7,10 @@ require_once 'index.php';
 // Get
 $id = $_GET['id'];
 
-if ($id === "" OR $id === false OR $id === null) {
-    header('location: list_owners.php');
-    exit();
-}
+//if ($id === "" OR $id === false OR $id === null) {
+//    header('location: list_owners.php');
+//    exit();
+//}
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,7 +74,7 @@ if ($id === "" OR $id === false OR $id === null) {
                 while ($stmt->fetch()) {
                     echo '<tr><td>' . $ownerid . '</td><td>' . $firstName . '</td><td>' . $lastName . '</td><td>' . $email 
                     . '</td><td>' . $phoneNumber . '</td><td>' . $accountNum . '</td><td>' . $accountCreationDate 
-                    . '</td><td><a href="update_stock.php?stockID=' . $stockid . '"&accountNum=' . $accountNum . '>' . $quantity 
+                    . '</td><td><a href="update_stock.php?stockID=' . $stockid . '&accountNum=\"' . $accountNum . '\"">' . $quantity 
                     . '</a></td><td>' . $stockid . '</td><td>' . $currentprice . '</td><td>' . $tickersymbol . '</td><td>' 
                     . $companyname . '</td></tr>'; 
                 }
